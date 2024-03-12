@@ -1,1 +1,28 @@
-GET https://cse341project1-w8nw.onrender.com/users
+### GET all Users
+GET http://localhost:3000/users
+
+### GET specific user
+GET http://localhost:3000/users/65ebe5f49c4bd6fd8cf413b7
+
+### POST new user
+POST http://localhost:3000/users HTTP/1.1
+Content-Type: application/json
+{
+  "email": "NewUser@aaa.com",
+  "username": "NewUser@aaa.com",
+  "name": "Hello New User",
+  "ipaddress": "94.121.163.23" 
+}
+
+### PUT new user
+POST http://localhost:3000/users/65ef768c8fd0abc5922749aa HTTP/1.1
+Content-Type: application/json
+{
+  "email": "NewUserUpdate@aaa.com",
+  "username": "NewUserUpdate@aaa.com",
+  "name": "Hello New NewUserUpdate",
+  "ipaddress": "94.121.163.23" 
+}
+
+### DELETE new user
+DELETE http://localhost:3000/users/65ef768c8fd0abc5922749aa
