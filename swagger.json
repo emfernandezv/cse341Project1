@@ -5,7 +5,7 @@
     "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "https://cse341project1-w8nw.onrender.com/",
+  "host": "cse341project1-w8nw.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -13,7 +13,7 @@
   "paths": {
     "/": {
       "get": {
-        "tags": [],
+        "tags": ["Hello World"],
         "description": "",
         "responses": {
           "200": {
@@ -24,7 +24,7 @@
     },
     "/users/": {
       "get": {
-        "tags": [],
+        "tags": ["Users"],
         "description": "",
         "produces": [
           "application/json"
@@ -36,7 +36,7 @@
         }
       },
       "post": {
-        "tags": [],
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
@@ -73,7 +73,7 @@
     },
     "/users/{id}": {
       "get": {
-        "tags": [],
+        "tags": ["Users"],
         "description": "",
         "produces": [
           "application/json"
@@ -96,7 +96,7 @@
         }
       },
       "put": {
-        "tags": [],
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
@@ -116,7 +116,7 @@
         }
       },
       "delete": {
-        "tags": [],
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
