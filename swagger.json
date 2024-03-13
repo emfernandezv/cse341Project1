@@ -13,7 +13,7 @@
   "paths": {
     "/": {
       "get": {
-        "tags": ["Hello World"],
+        "tags": ["Hellow World"],
         "description": "",
         "responses": {
           "200": {
@@ -24,7 +24,7 @@
     },
     "/users/": {
       "get": {
-        "tags": ["Users"],
+        "tags": ["User"],
         "description": "",
         "produces": [
           "application/json"
@@ -36,7 +36,7 @@
         }
       },
       "post": {
-        "tags": ["Users"],
+        "tags": ["User"],
         "description": "",
         "parameters": [
           {
@@ -73,7 +73,7 @@
     },
     "/users/{id}": {
       "get": {
-        "tags": ["Users"],
+        "tags": ["User"],
         "description": "",
         "produces": [
           "application/json"
@@ -96,7 +96,7 @@
         }
       },
       "put": {
-        "tags": ["Users"],
+        "tags": ["User"],
         "description": "",
         "parameters": [
           {
@@ -116,7 +116,121 @@
         }
       },
       "delete": {
-        "tags": ["Users"],
+        "tags": ["User"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/contacts/": {
+      "get": {
+        "tags": ["Contacts"],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Contacts"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "favoriteColor": {
+                  "example": "any"
+                },
+                "birthday": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/contacts/{id}": {
+      "get": {
+        "tags": ["Contacts"],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": ["Contacts"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Contacts"],
         "description": "",
         "parameters": [
           {

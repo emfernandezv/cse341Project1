@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const usersRoutes = require('./users');
+const contactsRoutes = require('./contactRouter');
 const swaggerRoutes = require('./swagger');
 
 router.use('/', swaggerRoutes);
@@ -10,5 +11,6 @@ router.get("/", (req, res) => {
 });
 
 router.use('/users', usersRoutes);
+router.use('/contacts', contactsRoutes);
 
 module.exports = router;
